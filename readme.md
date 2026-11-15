@@ -1,121 +1,238 @@
-# Froshgah — PHP & MySQL E-Commerce Platform
+# CyberDevelopers — Froshgah E-Commerce Platform 🛒
 
-A web-based e-commerce platform developed using PHP, MySQL, HTML, CSS, and JavaScript. Froshgah is designed to provide an online shopping experience with customer-facing features and administrative functionality.
+### Semester 5 Team Project | Advanced Software Engineering
 
-**Repository:** https://github.com/abdullahnooristani332/froshgah
+<p align="center">
+  <img src="projectImage.png" alt="CyberDevelopers E-Commerce Platform" width="900">
+</p>
 
----
+<p align="center">
+  A collaborative PHP and MySQL-based e-commerce platform developed by the CyberDevelopers team.
+</p>
 
-## Table of Contents
-
-- [About the Project](#about-the-project)
-- [Technologies](#technologies)
-- [Features](#features)
-- [Project Structure](#project-structure)
-- [Requirements](#requirements)
-- [Installation Guide](#installation-guide)
-- [Database Configuration](#database-configuration)
-- [Running the Application](#running-the-application)
-- [How to Use](#how-to-use)
-- [Development Setup](#development-setup)
-- [Contributing](#contributing)
-- [Security](#security)
-- [Author](#author)
-- [License](#license)
+<p align="center">
+  <img src="https://img.shields.io/badge/PHP-Backend-777BB4?logo=php&logoColor=white" alt="PHP">
+  <img src="https://img.shields.io/badge/MySQL-Database-4479A1?logo=mysql&logoColor=white" alt="MySQL">
+  <img src="https://img.shields.io/badge/HTML5-Frontend-E34F26?logo=html5&logoColor=white" alt="HTML5">
+  <img src="https://img.shields.io/badge/CSS3-Styling-1572B6?logo=css3&logoColor=white" alt="CSS3">
+  <img src="https://img.shields.io/badge/JavaScript-Frontend-F7DF1E?logo=javascript&logoColor=black" alt="JavaScript">
+  <img src="https://img.shields.io/badge/Project-Academic-success" alt="Academic Project">
+</p>
 
 ---
 
-## About the Project
+## 📖 Table of Contents
 
-Froshgah is an academic software engineering project that demonstrates the development of an e-commerce web application using core web technologies.
+1. [Introduction](#-introduction)
+2. [Project Overview](#-project-overview)
+3. [Team CyberDevelopers](#-team-cyberdevelopers)
+4. [Technologies](#-technologies)
+5. [Features](#-features)
+6. [Project Architecture](#-project-architecture)
+7. [Project Structure](#-project-structure)
+8. [System Requirements](#-system-requirements)
+9. [Installation and Setup](#-installation-and-setup)
+10. [Database Configuration](#-database-configuration)
+11. [Running the Application](#-running-the-application)
+12. [Git Development Workflow](#-git-development-workflow)
+13. [Contributing](#-contributing)
+14. [Security Considerations](#-security-considerations)
+15. [Academic Purpose](#-academic-purpose)
+16. [Future Improvements](#-future-improvements)
+17. [License](#-license)
+18. [Acknowledgements](#-acknowledgements)
 
-The project aims to provide a structured online shopping platform where customers can browse products, manage their shopping activities, and interact with the system.
+---
 
-It also provides an administrative area for managing the application.
+## 🚀 Introduction
 
-This project is suitable for learning, academic purposes, PHP development practice, and further customization.
+**Froshgah** is a web-based e-commerce platform developed by **CyberDevelopers** as a Semester 5 team project for the Advanced Software Engineering course.
 
-## Technologies
+The project demonstrates the practical application of software engineering principles and modern web development technologies in building an online shopping system.
 
-| Technology | Purpose |
+Our goal is to develop a structured, user-friendly, and maintainable e-commerce platform that connects customers with products through an organized digital shopping experience.
+
+The project covers important aspects of software development, including:
+
+- Frontend and backend development.
+- Relational database design and management.
+- User authentication and authorization.
+- E-commerce functionality.
+- Administrative management.
+- Team collaboration and version control.
+- Software development lifecycle practices.
+
+## 🎯 Project Overview
+
+| Attribute | Description |
 |---|---|
-| PHP | Backend development |
-| MySQL | Relational database management |
+| Project Name | Froshgah |
+| Team Name | CyberDevelopers |
+| Project Type | E-Commerce Web Application |
+| Academic Semester | Semester 5 |
+| Course | Advanced Software Engineering |
+| Backend | PHP |
+| Database | MySQL |
+| Frontend | HTML, CSS, JavaScript |
+| Version Control | Git and GitHub |
+| Repository | [GitHub Repository](https://github.com/abdullahnooristani332/froshgah) |
+
+## 👥 Team CyberDevelopers
+
+This project is developed collaboratively by six team members.
+
+| No. | Team Member | Responsibility |
+|---|---|---|
+| 1 | **Abdullah Nooristani** | Team Lead |
+| 2 | Zabihullah Safi | Developer |
+| 3 | Mujtaba Sarwari | Developer |
+| 4 | AbdulKhaleq Ghafoori | Developer |
+| 5 | Saifullah Yousufzai | Developer |
+| 6 | Rasheddin Rajabbi | Developer |
+
+**Team Name:** CyberDevelopers
+
+**Collaboration:** Software design, development, implementation, testing, and documentation.
+
+## 🛠 Technologies
+
+The project uses the following technologies:
+
+| Technology | Application |
+|---|---|
+| PHP | Server-side programming and business logic |
+| MySQL | Database management |
 | HTML5 | Web page structure |
-| CSS3 | Styling and responsive layouts |
-| JavaScript | Client-side interactivity |
+| CSS3 | Interface styling and responsive design |
+| JavaScript | Client-side interaction |
+| PDO | Secure database connectivity |
 | Apache | Web server |
-| PDO | PHP database connectivity |
 | Git | Version control |
 | GitHub | Source code hosting and collaboration |
+| Laragon / XAMPP | Local development environment |
 
-## Features
+## ✨ Features
 
-### Customer Features
+### Customer Module
 
-- User registration and authentication
-- Product browsing
-- Product details
-- Shopping cart
-- Order management
-- Customer profile management
-- Order history
-- Product reviews
-- Notifications
+- User registration and login.
+- Product browsing.
+- Product details.
+- Shopping cart.
+- Order placement and management.
+- Customer profile management.
+- Order history.
+- Product reviews.
+- Notifications.
 
-### Administrative Features
+### Administrator Module
 
-- Administrative dashboard
-- Product and store management
-- Order management
-- User management
+- Administrative dashboard.
+- Product management.
+- Order management.
+- User management.
+- Administrative operations.
 
-*Note: The availability of individual features depends on the current implementation in the repository.*
+*Feature availability depends on the implemented functionality in the current source code.*
 
-## Project Structure
+## 🏗 Project Architecture
+
+Froshgah follows a structured PHP web application approach, separating different application responsibilities into dedicated directories.
+
+The general request flow is:
+
+```text
+              USER / BROWSER
+                    |
+                    v
+             PRESENTATION
+          HTML / CSS / JavaScript
+                    |
+                    v
+             PHP APPLICATION
+          Pages / Actions / Includes
+                    |
+                    v
+              DATA ACCESS
+                  PDO
+                    |
+                    v
+               MySQL DB
+```
+
+### Main Application Responsibilities
+
+| Layer | Responsibility |
+|---|---|
+| Presentation Layer | Displays the user interface |
+| Application Layer | Processes requests and business logic |
+| Data Access Layer | Communicates with the database |
+| Database Layer | Stores application information |
+
+## 📂 Project Structure
 
 The main project directories are organized as follows:
 
 ```text
 froshgah/
 │
-├── actions/       # Application actions and processing
-├── admin/         # Administrative panel
-├── assets/        # CSS, JavaScript, images and other assets
-├── config/        # Application and database configuration
-├── database/      # Database files and SQL scripts
-├── includes/      # Shared PHP components
-├── pages/         # Application pages
-├── uploads/       # Uploaded files and images
+├── actions/          # Request processing and application actions
 │
-├── index.php      # Application entry point
-├── logout.php     # User logout
-├── README.md      # Project documentation
-└── .gitignore     # Git ignored files
+├── admin/            # Administrative dashboard and operations
+│
+├── assets/           # CSS, JavaScript, images and static resources
+│
+├── config/           # Application and database configuration
+│
+├── database/         # Database scripts and SQL exports
+│
+├── includes/         # Shared PHP components and reusable files
+│
+├── pages/            # Customer-facing application pages
+│
+├── uploads/          # Uploaded product images and other files
+│
+├── index.php         # Main application entry point
+├── logout.php        # User logout functionality
+├── projectImage.png  # Project presentation image
+├── README.md         # Project documentation
+└── .gitignore        # Git exclusion rules
 ```
 
-## Requirements
+## 💻 System Requirements
 
-Before installing Froshgah, make sure your computer has:
+Before installing the project, make sure your system has:
 
-- PHP 8.0 or later
-- MySQL 5.7+ or MariaDB
-- Apache web server
-- PHP PDO and PDO MySQL extensions
-- A modern web browser
-- Git (for cloning the repository)
+| Requirement | Recommended Version |
+|---|---|
+| Operating System | Windows, Linux or macOS |
+| PHP | 8.0 or later |
+| MySQL | 5.7 or later |
+| Apache | 2.4 or later |
+| Git | Latest stable version |
+| Browser | Chrome, Firefox, Edge or equivalent |
+| PHP Extensions | PDO and PDO MySQL |
 
-**Recommended local development environment:** Laragon, XAMPP, or another PHP/MySQL environment.
+**Recommended environment:** Laragon or XAMPP.
 
-## Installation Guide
+## ⚙️ Installation and Setup
 
-Follow these steps to install Froshgah on your local computer.
+Follow these instructions to download and run Froshgah on your local computer.
 
-### Step 1: Clone the Repository
+### Step 1: Install the Required Software
 
-Open your terminal (CMD, PowerShell, Git Bash, or VS Code Terminal).
+Install the following:
 
-Navigate to your web server directory.
+- [PHP / Laragon](https://laragon.org/download/)
+- [Git](https://git-scm.com/downloads)
+- [Visual Studio Code](https://code.visualstudio.com/)
+- [MySQL / phpMyAdmin](https://www.phpmyadmin.net/)
+
+If you use Laragon, PHP, MySQL, Apache, and phpMyAdmin can be managed through its local development environment.
+
+### Step 2: Clone the Repository
+
+Open CMD, PowerShell, Git Bash, or the VS Code terminal.
 
 For Laragon:
 
@@ -141,21 +258,21 @@ Enter the project directory:
 cd froshgah
 ```
 
-### Step 2: Start Apache and MySQL
+### Step 3: Start Apache and MySQL
 
-If you are using Laragon:
+**For Laragon:**
 
 1. Open Laragon.
-2. Start Apache.
-3. Start MySQL.
+2. Click Start All.
+3. Ensure Apache and MySQL are running.
 
-If you are using XAMPP:
+**For XAMPP:**
 
 1. Open XAMPP Control Panel.
 2. Start Apache.
 3. Start MySQL.
 
-### Step 3: Create the Database
+### Step 4: Create the MySQL Database
 
 Open phpMyAdmin:
 
@@ -163,171 +280,218 @@ Open phpMyAdmin:
 http://localhost/phpmyadmin
 ```
 
-1. Create a new MySQL database.
-2. Choose a database name.
-3. Open the `database/` directory in the project.
-4. Locate the provided `.sql` database file.
-5. Select the database in phpMyAdmin.
+1. Create a new database.
+2. Use the database name specified in your project configuration, or choose a name and configure the application accordingly.
+3. Open the project's `database/` directory.
+4. Locate the provided SQL schema or database export.
+5. Select your database in phpMyAdmin.
 6. Open the Import tab.
-7. Select the SQL file.
+7. Choose the SQL file.
 8. Click Import.
 
-If the project database has not yet been exported, ask the project maintainer for the current database schema.
+If no SQL file is included, obtain the database schema from the project maintainer before continuing.
 
-### Step 4: Configure the Database Connection
+### Step 5: Configure Database Credentials
 
-Open the configuration directory:
+Open the `config/` directory and locate the existing database connection file.
 
-```text
-config/
-```
+Configure your local database credentials.
 
-Locate the PHP file responsible for database connectivity.
-
-Update the database credentials according to your local MySQL configuration.
-
-Example configuration:
+Example PDO connection:
 
 ```php
+<?php
+
 $host = 'localhost';
-$dbname = 'your_database_name';
+$dbname = 'froshgah_db';
 $username = 'root';
 $password = '';
 
 $dsn = "mysql:host=$host;dbname=$dbname;charset=utf8mb4";
 
 $pdo = new PDO($dsn, $username, $password);
+
+$pdo->setAttribute(
+    PDO::ATTR_ERRMODE,
+    PDO::ERRMODE_EXCEPTION
+);
 ```
 
-**Important:** This is an illustrative PDO configuration. Preserve the existing connection structure in the actual project and update only the appropriate credentials.
+**Important:** This is an example. Follow the existing connection structure in the project rather than replacing your actual configuration blindly.
 
-### Step 5: Run the Application
+Never upload production credentials or private passwords to GitHub.
 
-Open your browser and visit:
+### Step 6: Run Froshgah
+
+Open your browser:
 
 ```text
 http://localhost/froshgah/
 ```
 
-If everything is configured correctly, the Froshgah homepage should appear.
+If the installation is successful, the Froshgah homepage should load.
 
 ---
 
-## How to Use
+## 🗄 Database Configuration
 
-### For Customers
+Froshgah uses MySQL as its relational database management system.
 
-1. Open the Froshgah homepage.
-2. Browse the available products.
-3. Register for an account or log in.
-4. Explore product details.
-5. Add products to your shopping cart.
-6. Continue through the available order process.
-7. Manage your profile and review your orders.
+The database stores information required for the application's operations, such as:
 
-### For Administrators
+- User accounts.
+- Products.
+- Shopping carts.
+- Orders.
+- Reviews.
+- Notifications.
 
-1. Access the administrative section.
-2. Log in using an authorized administrator account.
-3. Manage available administrative functions.
-4. Manage products, customers, and orders according to your permissions.
+The database schema and SQL initialization files should be maintained inside the `database/` directory.
 
-**Note:** An administrator account must be configured in the database or through the project's supported registration process. Never assume default administrator credentials.
+Before importing any database backup, make sure it does not contain real customer information, passwords, or other sensitive records.
 
----
+## ▶ Running the Application
 
-## Development Setup
+After completing the installation:
 
-If you want to contribute to the project or modify its source code:
+1. Start Apache.
+2. Start MySQL.
+3. Ensure the database exists.
+4. Check database credentials.
+5. Open the application in your browser.
 
-Clone the repository:
+```text
+http://localhost/froshgah/
+```
+
+For local development, use your Laragon or XAMPP environment.
+
+## 🌿 Git Development Workflow
+
+Developers who want to contribute should follow a branch-based Git workflow.
+
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/abdullahnooristani332/froshgah.git
 ```
 
-Enter the project directory:
+### 2. Enter the Project
 
 ```bash
 cd froshgah
 ```
 
-Check the current Git status:
-
-```bash
-git status
-```
-
-Create a new branch for your changes:
+### 3. Create a Feature Branch
 
 ```bash
 git checkout -b feature/your-feature-name
 ```
 
-After making changes:
+### 4. Make Your Changes
+
+Modify the project files and test your implementation.
+
+### 5. Stage Your Changes
 
 ```bash
 git add .
 ```
 
-Commit your changes:
+### 6. Commit Your Changes
 
 ```bash
 git commit -m "Add your feature description"
 ```
 
-Push your branch:
+### 7. Push Your Branch
 
 ```bash
 git push -u origin feature/your-feature-name
 ```
 
-Then open a Pull Request on GitHub.
+### 8. Create a Pull Request
 
-## Contributing
+Open the repository on GitHub and create a Pull Request to propose merging your changes into the main branch.
 
-Contributions, suggestions, bug reports, and improvements are welcome.
+## 🤝 Contributing
+
+We welcome contributions, suggestions, bug reports, and improvements.
 
 To contribute:
 
-1. Fork this repository.
+1. Fork the repository.
 2. Clone your fork.
-3. Create a new feature branch.
-4. Implement your improvements.
+3. Create a separate feature branch.
+4. Implement your changes.
 5. Test your changes.
-6. Commit and push your changes.
+6. Commit and push your work.
 7. Submit a Pull Request.
 
-Please provide clear descriptions of your changes.
+Please keep your code organized and provide clear descriptions of your contributions.
 
-## Security
+## 🔐 Security Considerations
 
-- Never commit database passwords or API keys.
-- Do not upload private user information.
-- Keep sensitive configuration files out of version control.
-- Use secure password hashing.
+Security is an important part of web application development.
+
+Please follow these practices:
+
+- Never upload database passwords or API keys.
+- Use prepared statements for database operations.
 - Validate and sanitize user input.
-- Use prepared SQL statements.
-- Configure appropriate access permissions.
+- Hash passwords using secure password hashing functions.
+- Implement authentication and authorization checks.
+- Restrict access to administrative functionality.
+- Validate uploaded files.
+- Avoid exposing sensitive error messages.
+- Keep private user data out of public repositories.
 
-## Author
+## 🎓 Academic Purpose
 
-**Abdullah Nooristani**
+This project is developed as part of the Semester 5 Advanced Software Engineering course.
 
-Software Engineering Student | PHP & Web Developer
+It demonstrates the practical application of software engineering concepts, collaborative development, database integration, web technologies, and project documentation.
 
-GitHub: [@abdullahnooristani332](https://github.com/abdullahnooristani332)
+The project is intended for educational purposes and can be extended as a foundation for further software engineering development.
 
-## License
+## 🚀 Future Improvements
 
-No license has currently been specified.
+Potential improvements include:
 
-Unless a license is added to this repository, the project should not be assumed to be freely reusable, modified, or redistributed.
+- Online payment gateway integration.
+- Advanced product search and filtering.
+- Product recommendation system.
+- Enhanced analytics dashboard.
+- Email notifications.
+- Improved security and performance.
+- REST API development.
+- Automated testing.
+- Deployment to a production server.
 
-For reuse and distribution, the project owner should add an appropriate open-source license.
+These are possible future enhancements and should not be interpreted as currently implemented features.
+
+## 📜 License
+
+No open-source license has currently been specified.
+
+Unless the project owner adds a license, the source code remains subject to applicable copyright law. Please contact the project owner for permission before redistributing or reusing the code.
+
+## 🙏 Acknowledgements
+
+We would like to thank our instructors, classmates, and everyone who supported the development of this project.
+
+Special thanks to all members of **CyberDevelopers** for their collaboration, dedication, and contributions.
 
 ---
 
-**If you find this project useful, consider giving the repository a star on GitHub!**
+<p align="center">
+  <strong>CyberDevelopers</strong>
+  <br>
+  Building Ideas Into Software.
+  <br><br>
+  ⭐ If you find this project interesting, consider giving it a star on GitHub!
+</p>
 
-⭐ Thank you for visiting Froshgah.
+<p align="center">
+  <a href="https://github.com/abdullahnooristani332/froshgah">GitHub Repository</a>
+</p>
