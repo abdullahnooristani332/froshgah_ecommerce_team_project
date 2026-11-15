@@ -1,0 +1,344 @@
+/* ==========================================
+   FROSHGAH EXTRA-COMPACT REGISTER DESIGN
+========================================== */
+
+body:has(.frosh-register-page) {
+    margin: 0;
+    padding: 0;
+    background: #f8faff;
+}
+
+.frosh-register-page {
+    min-height: 100vh;
+    width: 100%;
+    padding: 30px 15px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+        radial-gradient(circle at 10% 15%, #edf2ff 0, transparent 25%),
+        radial-gradient(circle at 90% 85%, #edf2ff 0, transparent 25%),
+        #ffffff;
+}
+
+/* MAIN CARD */
+
+.frosh-register-card {
+    width: 100%;
+    max-width: 850px;
+    min-height: 490px;
+
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+
+    background: #ffffff;
+    border: 1px solid #e3eaff;
+    border-radius: 24px;
+    overflow: hidden;
+
+    box-shadow: 0 10px 35px rgba(35, 78, 160, 0.09);
+}
+
+/* LEFT IMAGE */
+
+.frosh-register-visual {
+    min-width: 0;
+    background: #edf2ff;
+    overflow: hidden;
+}
+
+.frosh-register-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 490px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* RIGHT CONTENT */
+
+.frosh-register-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px 35px;
+    box-sizing: border-box;
+    background: #ffffff;
+}
+
+.frosh-register-inner {
+    width: 100%;
+    max-width: 340px;
+}
+
+/* HEADING */
+
+.frosh-register-heading {
+    text-align: center;
+    margin-bottom: 17px;
+}
+
+.frosh-register-heading h1 {
+    margin: 0 0 5px;
+    color: #123d83;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -0.7px;
+}
+
+.frosh-register-heading p {
+    margin: 0;
+    color: #536a9b;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* ERROR MESSAGE */
+
+.frosh-register-alert {
+    padding: 9px 12px;
+    border-radius: 9px;
+    margin-bottom: 11px;
+    font-size: 12px;
+
+    color: #a32222;
+    background: #fff0f0;
+    border: 1px solid #ffd1d1;
+}
+
+/* FORM */
+
+.frosh-register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+/* INPUT FIELDS */
+
+.frosh-register-field {
+    height: 42px;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 0 11px;
+    box-sizing: border-box;
+
+    border: 1px solid #e3eaff;
+    border-radius: 11px;
+    background: #ffffff;
+
+    box-shadow: 0 2px 8px rgba(35, 78, 160, 0.04);
+
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.frosh-register-field:focus-within {
+    border-color: #3979e8;
+    box-shadow: 0 0 0 3px rgba(57, 121, 232, 0.08);
+}
+
+/* HTML VALIDATION VISUAL FEEDBACK */
+
+.frosh-register-field:has(input:user-invalid) {
+    border-color: #e35d5d;
+}
+
+.frosh-register-field:has(input:user-valid) {
+    border-color: #27a36b;
+}
+
+/* ICON */
+
+.frosh-register-icon {
+    width: 19px;
+    height: 19px;
+    flex-shrink: 0;
+    color: #16458f;
+}
+
+.frosh-register-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* INPUT */
+
+.frosh-register-field input {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+
+    border: none !important;
+    outline: none !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+
+    color: #173e7f;
+    font-size: 12px;
+    font-family: inherit;
+}
+
+.frosh-register-field input::placeholder {
+    color: #8997b5;
+    opacity: 1;
+}
+
+/* ACCESSIBILITY */
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* REGISTER BUTTON */
+
+.frosh-register-button {
+    width: 100%;
+    min-height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    margin-top: 3px;
+
+    border: none;
+    border-radius: 35px;
+
+    background: linear-gradient(100deg, #ff7900, #ff6200);
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 700;
+    font-family: inherit;
+
+    cursor: pointer;
+
+    box-shadow: 0 5px 12px rgba(255, 106, 0, 0.14);
+
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.frosh-register-button svg {
+    width: 19px;
+    height: 19px;
+}
+
+.frosh-register-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(255, 106, 0, 0.2);
+}
+
+.frosh-register-button:active {
+    transform: translateY(0);
+}
+
+/* LOGIN LINK */
+
+.frosh-register-login {
+    margin: 17px 0 0;
+    text-align: center;
+    color: #183e7e;
+    font-size: 11px;
+}
+
+.frosh-register-login a {
+    margin-left: 5px;
+    color: #075ee8;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.frosh-register-login a:hover {
+    color: #ff7900;
+}
+
+/* TABLET */
+
+@media (max-width: 800px) {
+
+    .frosh-register-card {
+        max-width: 700px;
+        min-height: 450px;
+    }
+
+    .frosh-register-image {
+        min-height: 450px;
+    }
+
+    .frosh-register-content {
+        padding: 22px;
+    }
+
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .frosh-register-page {
+        padding: 18px 12px;
+    }
+
+    .frosh-register-card {
+        max-width: 380px;
+        min-height: auto;
+        grid-template-columns: 1fr;
+        border-radius: 20px;
+    }
+
+    .frosh-register-visual {
+        height: 165px;
+    }
+
+    .frosh-register-image {
+        height: 165px;
+        min-height: 0;
+    }
+
+    .frosh-register-content {
+        padding: 25px 20px 30px;
+    }
+
+    .frosh-register-inner {
+        max-width: 100%;
+    }
+
+    .frosh-register-heading h1 {
+        font-size: 27px;
+    }
+
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 380px) {
+
+    .frosh-register-content {
+        padding: 22px 16px 27px;
+    }
+
+    .frosh-register-heading h1 {
+        font-size: 25px;
+    }
+
+}

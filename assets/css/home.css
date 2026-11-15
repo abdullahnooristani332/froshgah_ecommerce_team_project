@@ -1,0 +1,696 @@
+/* =========================================
+   FROSHGAH HOMEPAGE
+   Professional E-commerce Design
+========================================= */
+
+.frosh-home,
+.frosh-home * {
+    box-sizing: border-box;
+}
+
+.frosh-home {
+    background: #fff;
+    color: #173E7F;
+    width: 100%;
+    font-family: inherit;
+}
+
+.frosh-home a {
+    text-decoration: none;
+}
+
+.frosh-container {
+    max-width: 1180px;
+    width: 100%;
+    padding: 0 20px;
+    margin: auto;
+}
+
+
+/* HERO */
+
+.frosh-hero {
+    padding: 30px 0;
+    background:
+        radial-gradient(circle at 80% 45%, #ffffff, transparent 40%),
+        #fff;
+}
+
+.frosh-hero-grid {
+    min-height: 285px;
+    display: grid;
+    grid-template-columns: .9fr 1.1fr;
+    align-items: center;
+    gap: 25px;
+}
+
+.frosh-eyebrow {
+    color: #F47700;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.frosh-hero-content h1 {
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.12;
+    letter-spacing: -1px;
+    font-weight: 850;
+    color: #123D83;
+    margin: 12px 0;
+}
+
+.frosh-hero-content h1 span {
+    display: block;
+    color: #FF7900;
+}
+
+.frosh-hero-content p {
+    color: #617494;
+    max-width: 390px;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.frosh-primary-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 11px 21px;
+    background: linear-gradient(100deg, #FF7900, #FF6200);
+    border-radius: 30px;
+    color: white !important;
+    font-size: 13px;
+    font-weight: 700;
+    transition: .25s;
+}
+
+.frosh-primary-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 15px #ff790033;
+}
+
+
+/* HERO COMMERCIAL IMAGE */
+
+.frosh-hero-image {
+    height: 285px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    background: linear-gradient(135deg, #ffffff, #ffffff);
+}
+
+.frosh-hero-image>img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    position: absolute;
+    inset: 0;
+}
+
+.frosh-commercial-placeholder {
+    display: none;
+    position: absolute;
+    inset: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: #345A91;
+    text-align: center;
+}
+
+.frosh-commercial-placeholder strong {
+    font-size: 17px;
+}
+
+.frosh-commercial-placeholder span {
+    font-size: 35px;
+}
+
+.frosh-commercial-placeholder small {
+    color: #7084A5;
+    font-size: 11px;
+}
+
+
+/* SECTIONS */
+
+.frosh-section {
+    padding: 24px 0;
+}
+
+.frosh-section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.frosh-section-heading h2 {
+    margin: 0;
+    font-size: 21px;
+    color: #123D83;
+    font-weight: 800;
+}
+
+.frosh-section-heading a {
+    color: #1760C9;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* CATEGORIES */
+
+.frosh-categories-section {
+    border-top: 1px solid #EDF0F7;
+}
+
+.frosh-category-grid {
+    display: grid;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.frosh-category-card {
+    min-width: 0;
+    text-align: center;
+    color: #173E7F;
+}
+
+.frosh-category-image {
+    height: 90px;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: .25s;
+}
+
+.frosh-category-card:hover .frosh-category-image {
+    transform: translateY(-4px);
+    background: #E7EEFC;
+}
+
+.frosh-category-placeholder {
+    color: #8999B4;
+    font-size: 10px;
+}
+
+.frosh-category-card h3 {
+    font-size: 11px;
+    line-height: 1.5;
+    margin: 9px 0 0;
+    font-weight: 700;
+}
+
+.frosh-empty-message {
+    padding: 25px;
+    text-align: center;
+    color: #8291AA;
+}
+
+
+/* BENEFITS */
+
+.frosh-benefits-section {
+    padding: 12px 0;
+}
+
+.frosh-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 17px 10px;
+    border-radius: 14px;
+    background: #F2F5FC;
+}
+
+.frosh-benefit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 8px;
+    border-right: 1px solid #DCE3F0;
+}
+
+.frosh-benefit:last-child {
+    border-right: none;
+}
+
+.frosh-benefit-icon {
+    font-size: 23px;
+}
+
+.frosh-benefit h3 {
+    font-size: 11px;
+    margin: 0 0 4px;
+    font-weight: 800;
+}
+
+.frosh-benefit p {
+    color: #8491A9;
+    font-size: 10px;
+    margin: 0;
+}
+
+
+/* PROMOTIONAL BANNERS */
+
+.frosh-promo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.frosh-promo-card {
+    min-height: 185px;
+    display: grid;
+    grid-template-columns: 1fr .9fr;
+    align-items: center;
+    gap: 8px;
+    padding: 18px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.frosh-promo-blue {
+    background: linear-gradient(110deg, #E4F0FF, #D4E7FF);
+}
+
+.frosh-promo-orange {
+    background: linear-gradient(110deg, #FFF0DF, #FFE3C5);
+}
+
+.frosh-promo-content>span {
+    color: #F47700;
+    font-size: 9px;
+    font-weight: 800;
+}
+
+.frosh-promo-content h2 {
+    font-size: 20px;
+    line-height: 1.2;
+    margin: 8px 0;
+    color: #123D83;
+}
+
+.frosh-promo-content p {
+    color: #586F91;
+    font-size: 11px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.frosh-promo-content>a {
+    display: inline-block;
+    padding: 8px 13px;
+    border-radius: 25px;
+    background: #123D83;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.frosh-promo-orange .frosh-promo-content>a {
+    background: #FF7900;
+}
+
+.frosh-promo-image {
+    position: relative;
+    min-height: 125px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #ffffff40;
+}
+
+.frosh-promo-image img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    object-fit: contain;
+}
+
+.frosh-promo-placeholder {
+    display: none;
+    color: #8292AB;
+    font-size: 10px;
+    text-align: center;
+}
+
+
+/* TRENDING PRODUCTS */
+
+.frosh-products-section {
+    border-top: 1px solid #EDF0F7;
+}
+
+.frosh-products-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 13px;
+}
+
+.frosh-product-card {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #E8EDF6;
+    border-radius: 14px;
+    background: white;
+    transition: .25s;
+}
+
+.frosh-product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px #1e3c6e17;
+}
+
+.frosh-product-image {
+    height: 155px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FAFBFE;
+    overflow: hidden;
+}
+
+.frosh-product-image img {
+    width: 100%;
+    height: 100%;
+    padding: 12px;
+    object-fit: contain;
+    transition: .3s;
+}
+
+.frosh-product-card:hover .frosh-product-image img {
+    transform: scale(1.06);
+}
+
+.frosh-product-placeholder {
+    color: #8999B4;
+    font-size: 10px;
+}
+
+.frosh-product-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 11px;
+}
+
+.frosh-product-category {
+    color: #8997AF;
+    font-size: 9px;
+    margin-bottom: 5px;
+}
+
+.frosh-product-info h3 {
+    font-size: 12px;
+    line-height: 1.5;
+    margin: 0 0 7px;
+}
+
+.frosh-product-info h3 a {
+    color: #183E7E;
+}
+
+.frosh-product-description {
+    color: #8997AF;
+    font-size: 10px;
+    line-height: 1.5;
+    margin: 0 0 9px;
+}
+
+.frosh-product-price {
+    color: #E64B2E;
+    font-size: 14px;
+    font-weight: 800;
+    margin-top: auto;
+    margin-bottom: 7px;
+}
+
+.frosh-product-stock {
+    font-size: 10px;
+    margin-bottom: 9px;
+}
+
+.frosh-in-stock {
+    color: #16834A;
+}
+
+.frosh-out-stock {
+    color: #D43B3B;
+}
+
+.frosh-product-button {
+    min-height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FF7900;
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    border-radius: 20px;
+    transition: .2s;
+}
+
+.frosh-product-button:hover {
+    background: #E96700;
+}
+
+
+/* EMPTY PRODUCTS */
+
+.frosh-empty-products {
+    padding: 45px 15px;
+    text-align: center;
+    background: #F7F9FD;
+    border: 1px dashed #D9E2F1;
+    border-radius: 15px;
+}
+
+.frosh-empty-icon {
+    font-size: 40px;
+}
+
+.frosh-empty-products h3 {
+    font-size: 18px;
+}
+
+.frosh-empty-products p {
+    color: #8290A9;
+    font-size: 13px;
+}
+
+.frosh-empty-products a {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #FF7900;
+    border-radius: 25px;
+    color: white;
+    font-size: 12px;
+}
+
+
+/* NEWSLETTER */
+
+.frosh-newsletter-section {
+    padding: 12px 0 30px;
+}
+
+.frosh-newsletter {
+    min-height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 15px 25px;
+    background: linear-gradient(100deg, #123D83, #0C3474);
+    border-radius: 14px;
+    color: white;
+}
+
+.frosh-newsletter-icon {
+    font-size: 28px;
+}
+
+.frosh-newsletter-text {
+    flex: 1;
+}
+
+.frosh-newsletter-text h2 {
+    font-size: 17px;
+    margin: 0 0 5px;
+    color: white;
+}
+
+.frosh-newsletter-text p {
+    font-size: 11px;
+    color: #D5E2F7;
+    margin: 0;
+}
+
+.frosh-newsletter-button {
+    display: inline-flex;
+    padding: 11px 18px;
+    border-radius: 25px;
+    background: #FF7900;
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+
+/* TABLETS */
+
+@media (max-width: 1000px) {
+
+    .frosh-category-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .frosh-products-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .frosh-benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px 0;
+    }
+
+    .frosh-benefit:nth-child(2) {
+        border-right: none;
+    }
+}
+
+@media (max-width: 800px) {
+
+    .frosh-hero-content h1 {
+        font-size: 35px;
+    }
+
+    .frosh-hero-image {
+        height: 245px;
+    }
+
+    .frosh-products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .frosh-container {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .frosh-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .frosh-hero-content h1 {
+        font-size: 34px;
+    }
+
+    .frosh-hero-image {
+        height: 220px;
+    }
+
+    .frosh-category-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px 8px;
+    }
+
+    .frosh-category-image {
+        height: 75px;
+    }
+
+    .frosh-category-card h3 {
+        font-size: 10px;
+    }
+
+    .frosh-benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .frosh-benefit {
+        justify-content: flex-start;
+        padding: 8px;
+    }
+
+    .frosh-benefit h3 {
+        font-size: 10px;
+    }
+
+    .frosh-benefit p {
+        font-size: 9px;
+    }
+
+    .frosh-promo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .frosh-promo-card {
+        min-height: 160px;
+    }
+
+    .frosh-products-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .frosh-product-image {
+        height: 145px;
+    }
+
+    .frosh-newsletter {
+        flex-wrap: wrap;
+        padding: 17px;
+    }
+
+    .frosh-newsletter-text {
+        min-width: 65%;
+    }
+
+    .frosh-newsletter-button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .frosh-hero-content h1 {
+        font-size: 29px;
+    }
+
+    .frosh-product-image {
+        height: 125px;
+    }
+
+    .frosh-promo-card {
+        grid-template-columns: 1fr .8fr;
+    }
+
+}

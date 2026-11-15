@@ -1,0 +1,2269 @@
+/* =========================================================
+   FROSHGAH - PRODUCT DETAILS PAGE
+   Design: Navy Blue + Orange + White
+========================================================= */
+
+
+/* =========================================================
+   1. DESIGN VARIABLES
+========================================================= */
+
+.pd-page {
+
+    --pd-primary: #ff6900;
+    --pd-primary-dark: #ed5900;
+
+    --pd-navy: #123b78;
+    --pd-navy-dark: #0b2e65;
+
+    --pd-text: #17345f;
+    --pd-muted: #7183a5;
+
+    --pd-border: #e8edfa;
+    --pd-light: #f4f7ff;
+    --pd-white: #ffffff;
+
+    --pd-success: #159b62;
+    --pd-danger: #e34d4d;
+
+    max-width: 1440px;
+
+    width: 100%;
+
+    margin: 0 auto;
+
+    padding: 22px 32px 55px;
+
+    color: var(--pd-text);
+
+    font-family: inherit;
+
+    box-sizing: border-box;
+
+}
+
+.pd-page *,
+.pd-page *::before,
+.pd-page *::after {
+
+    box-sizing: border-box;
+
+}
+
+.pd-page a {
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+.pd-page button,
+.pd-page input,
+.pd-page select,
+.pd-page textarea {
+
+    font: inherit;
+
+}
+
+.pd-page button {
+
+    cursor: pointer;
+
+}
+
+.pd-page img {
+
+    display: block;
+
+    max-width: 100%;
+
+}
+
+
+/* =========================================================
+   2. BREADCRUMB
+========================================================= */
+
+.pd-breadcrumb {
+
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+
+    font-size: 13px;
+
+    color: var(--pd-muted);
+
+}
+
+.pd-breadcrumb a {
+
+    transition: color 0.2s ease;
+
+}
+
+.pd-breadcrumb a:hover {
+
+    color: var(--pd-primary);
+
+}
+
+.pd-breadcrumb>a:first-child {
+
+    font-size: 22px;
+
+    color: var(--pd-navy);
+
+}
+
+.pd-breadcrumb-arrow {
+
+    font-size: 20px;
+
+    color: #9aabc9;
+
+}
+
+.pd-breadcrumb-current {
+
+    color: var(--pd-navy);
+
+    font-weight: 600;
+
+}
+
+
+/* =========================================================
+   3. MAIN PRODUCT LAYOUT
+========================================================= */
+
+.pd-product-layout {
+
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.06fr);
+
+    gap: 38px;
+
+    align-items: start;
+
+    margin-bottom: 42px;
+
+}
+
+
+/* =========================================================
+   4. PRODUCT GALLERY
+========================================================= */
+
+.pd-gallery {
+
+    width: 100%;
+
+    min-width: 0;
+
+}
+
+.pd-main-image {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 100%;
+
+    height: 430px;
+
+    overflow: hidden;
+
+    border-radius: 19px;
+
+    background:
+
+        radial-gradient(circle at 70% 35%,
+            #ffffff 0%,
+            #edf2ff 65%,
+            #eaf0ff 100%);
+
+    border: 1px solid #edf0fa;
+
+}
+
+.pd-main-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    padding: 22px;
+
+    object-fit: contain;
+
+    transition: transform 0.4s ease;
+
+}
+
+.pd-main-image:hover img {
+
+    transform: scale(1.045);
+
+}
+
+.pd-image-label {
+
+    position: absolute;
+
+    top: 17px;
+
+    left: 17px;
+
+    z-index: 2;
+
+    padding: 8px 16px;
+
+    background: var(--pd-primary);
+
+    color: white;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    border-radius: 30px;
+
+    box-shadow: 0 5px 15px rgba(255, 105, 0, 0.2);
+
+}
+
+.pd-image-placeholder {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: var(--pd-muted);
+
+}
+
+.pd-image-placeholder span {
+
+    font-size: 75px;
+
+}
+
+.pd-image-placeholder p {
+
+    font-size: 14px;
+
+}
+
+
+/* =========================================================
+   5. PRODUCT THUMBNAILS
+========================================================= */
+
+.pd-thumbnails {
+
+    display: grid;
+
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+
+    gap: 12px;
+
+    margin-top: 14px;
+
+}
+
+.pd-thumbnail {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    height: 90px;
+
+    padding: 7px;
+
+    border: 1px solid var(--pd-border);
+
+    border-radius: 14px;
+
+    background: #f6f8ff;
+
+    transition: all 0.25s ease;
+
+    overflow: hidden;
+
+}
+
+.pd-thumbnail img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+}
+
+.pd-thumbnail:hover {
+
+    border-color: var(--pd-primary);
+
+    transform: translateY(-3px);
+
+}
+
+.pd-thumbnail.active {
+
+    border: 1.5px solid var(--pd-primary);
+
+    background: #fff9f4;
+
+    box-shadow: 0 3px 12px rgba(255, 105, 0, 0.1);
+
+}
+
+
+/* =========================================================
+   6. PRODUCT INFORMATION
+========================================================= */
+
+.pd-product-info {
+
+    min-width: 0;
+
+    padding-top: 0;
+
+}
+
+.pd-category-badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 7px 14px;
+
+    margin-bottom: 12px;
+
+    border-radius: 30px;
+
+    background: #fff0e5;
+
+    color: var(--pd-primary-dark);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+}
+
+.pd-product-title {
+
+    margin: 0 0 7px;
+
+    color: var(--pd-navy-dark);
+
+    font-size: clamp(27px, 3vw, 36px);
+
+    font-weight: 800;
+
+    line-height: 1.25;
+
+    overflow-wrap: anywhere;
+
+}
+
+.pd-product-subtitle {
+
+    margin: 0 0 15px;
+
+    color: #687c9e;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =========================================================
+   7. PRODUCT RATINGS
+========================================================= */
+
+.pd-rating-row {
+
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    margin-bottom: 16px;
+
+}
+
+.pd-stars {
+
+    display: flex;
+
+    gap: 2px;
+
+    font-size: 19px;
+
+    letter-spacing: -1px;
+
+}
+
+.pd-star-filled {
+
+    color: #ff8b00;
+
+}
+
+.pd-star-empty {
+
+    color: #d7deeb;
+
+}
+
+.pd-rating-number {
+
+    color: #42618d;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+.pd-review-count {
+
+    color: #5577b0 !important;
+
+    font-size: 13px;
+
+}
+
+.pd-review-count:hover {
+
+    color: var(--pd-primary) !important;
+
+}
+
+.pd-no-rating {
+
+    color: var(--pd-muted);
+
+    font-size: 13px;
+
+}
+
+
+/* =========================================================
+   8. PRODUCT PRICE
+========================================================= */
+
+.pd-price-section {
+
+    display: flex;
+
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 13px;
+
+    margin-bottom: 22px;
+
+}
+
+.pd-current-price {
+
+    color: var(--pd-primary);
+
+    font-size: 32px;
+
+    font-weight: 800;
+
+    letter-spacing: -0.8px;
+
+}
+
+
+/* =========================================================
+   9. PRODUCT FACTS
+========================================================= */
+
+.pd-product-features {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin: 20px 0 25px;
+
+}
+
+.pd-feature-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: #42618d;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+}
+
+.pd-feature-icon {
+
+    display: flex;
+
+    flex-shrink: 0;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 29px;
+
+    height: 29px;
+
+    border-radius: 50%;
+
+    color: #2866be;
+
+    background: #edf3ff;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================================
+   10. QUANTITY AND ADD TO CART
+========================================================= */
+
+.pd-cart-form {
+
+    display: grid;
+
+    grid-template-columns: 145px minmax(0, 1fr);
+
+    align-items: center;
+
+    gap: 17px;
+
+    margin-top: 20px;
+
+}
+
+.pd-quantity-control {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    height: 51px;
+
+    padding: 0 8px;
+
+    border: 1px solid #e0e8fa;
+
+    border-radius: 35px;
+
+    background: white;
+
+    box-shadow: 0 2px 8px rgba(25, 60, 110, 0.03);
+
+}
+
+.pd-quantity-control input {
+
+    width: 42px;
+
+    min-width: 0;
+
+    padding: 0;
+
+    text-align: center;
+
+    color: var(--pd-navy);
+
+    background: transparent;
+
+    border: none;
+
+    outline: none;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    appearance: textfield;
+
+    -moz-appearance: textfield;
+
+}
+
+.pd-quantity-control input::-webkit-inner-spin-button,
+.pd-quantity-control input::-webkit-outer-spin-button {
+
+    -webkit-appearance: none;
+
+    margin: 0;
+
+}
+
+.pd-quantity-button {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 30px;
+
+    height: 30px;
+
+    padding: 0;
+
+    color: var(--pd-navy);
+
+    background: transparent;
+
+    border: none;
+
+    border-radius: 50%;
+
+    font-size: 22px;
+
+    transition: all 0.2s ease;
+
+}
+
+.pd-quantity-button:hover {
+
+    color: var(--pd-primary);
+
+    background: #fff1e7;
+
+}
+
+.pd-add-to-cart {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 11px;
+
+    min-height: 51px;
+
+    padding: 12px 20px;
+
+    border: none;
+
+    border-radius: 35px;
+
+    color: white;
+
+    background: linear-gradient(135deg,
+            #ff7800,
+            #ff5b00);
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    box-shadow: 0 7px 18px rgba(255, 105, 0, 0.18);
+
+    transition: all 0.25s ease;
+
+}
+
+.pd-add-to-cart span {
+
+    font-size: 19px;
+
+}
+
+.pd-add-to-cart:hover {
+
+    background: linear-gradient(135deg,
+            #f46b00,
+            #e94e00);
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 10px 23px rgba(255, 105, 0, 0.25);
+
+}
+
+.pd-add-to-cart:active {
+
+    transform: scale(0.98);
+
+}
+
+.pd-out-of-stock {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    width: 100%;
+
+    padding: 15px;
+
+    border-radius: 30px;
+
+    background: #fff0f0;
+
+    color: var(--pd-danger);
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================================
+   11. SECONDARY ACTIONS
+========================================================= */
+
+.pd-secondary-actions {
+
+    display: flex;
+
+    margin-top: 17px;
+
+}
+
+.pd-secondary-button {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    width: 100%;
+
+    min-height: 43px;
+
+    padding: 10px 18px;
+
+    border: 1px solid #d9e4fb;
+
+    border-radius: 30px;
+
+    background: white;
+
+    color: #3267b7;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: all 0.2s ease;
+
+}
+
+.pd-secondary-button span {
+
+    font-size: 19px;
+
+}
+
+.pd-secondary-button:hover {
+
+    border-color: var(--pd-primary);
+
+    color: var(--pd-primary);
+
+    background: #fffaf6;
+
+}
+
+.pd-stock-note {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 15px;
+
+    color: var(--pd-muted);
+
+    font-size: 12px;
+
+}
+
+.pd-stock-dot {
+
+    width: 8px;
+
+    height: 8px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #20b875;
+
+}
+
+.pd-stock-dot-red {
+
+    background: #e34d4d;
+
+}
+
+
+/* =========================================================
+   12. PRODUCT TABS CONTAINER
+========================================================= */
+
+.pd-tabs-section {
+
+    width: 100%;
+
+    margin-top: 35px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--pd-border);
+
+    border-radius: 22px;
+
+    background: white;
+
+    box-shadow: 0 5px 25px rgba(26, 65, 120, 0.035);
+
+}
+
+.pd-tabs-navigation {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    min-height: 63px;
+
+    padding: 0 25px;
+
+    border-bottom: 1px solid var(--pd-border);
+
+    background: #fbfcff;
+
+}
+
+.pd-tab-button {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    padding: 17px 12px;
+
+    color: var(--pd-navy);
+
+    background: transparent;
+
+    border: none;
+
+    font-size: 15px;
+
+    font-weight: 500;
+
+    transition: all 0.2s ease;
+
+}
+
+.pd-tab-button span {
+
+    font-size: 19px;
+
+}
+
+.pd-tab-button:hover {
+
+    color: var(--pd-primary);
+
+}
+
+.pd-tab-button.active {
+
+    color: var(--pd-primary);
+
+    font-weight: 700;
+
+}
+
+.pd-tab-button.active::after {
+
+    position: absolute;
+
+    content: "";
+
+    bottom: -1px;
+
+    left: 10%;
+
+    width: 80%;
+
+    height: 2px;
+
+    background: var(--pd-primary);
+
+}
+
+
+/* =========================================================
+   13. TAB PANELS
+========================================================= */
+
+.pd-tab-panel {
+
+    padding: 24px;
+
+}
+
+.pd-tab-panel[hidden] {
+
+    display: none !important;
+
+}
+
+
+/* =========================================================
+   14. DESCRIPTION PANEL
+========================================================= */
+
+.pd-description-layout {
+
+    display: grid;
+
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.4fr);
+
+    gap: 35px;
+
+    align-items: center;
+
+}
+
+.pd-description-image {
+
+    width: 100%;
+
+    height: 250px;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    background: #f0f4ff;
+
+}
+
+.pd-description-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    padding: 12px;
+
+}
+
+.pd-description-placeholder {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    height: 100%;
+
+    color: var(--pd-muted);
+
+}
+
+.pd-description-content h2 {
+
+    margin: 0 0 13px;
+
+    color: var(--pd-navy);
+
+    font-size: 21px;
+
+    font-weight: 700;
+
+}
+
+.pd-description-content>p {
+
+    margin: 0 0 18px;
+
+    color: #63789b;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    overflow-wrap: anywhere;
+
+}
+
+.pd-description-facts {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+}
+
+.pd-description-facts>div {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 9px 12px;
+
+    border-radius: 8px;
+
+    background: #f7f9ff;
+
+    font-size: 13px;
+
+}
+
+.pd-description-facts span {
+
+    color: var(--pd-muted);
+
+}
+
+.pd-description-facts strong {
+
+    color: var(--pd-navy);
+
+    text-align: right;
+
+    overflow-wrap: anywhere;
+
+}
+
+
+/* =========================================================
+   15. SPECIFICATIONS PANEL
+========================================================= */
+
+.pd-specifications-content {
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+}
+
+.pd-specifications-content h2 {
+
+    margin: 0 0 7px;
+
+    color: var(--pd-navy);
+
+    font-size: 22px;
+
+}
+
+.pd-specifications-content>p {
+
+    margin: 0 0 22px;
+
+    color: var(--pd-muted);
+
+    font-size: 13px;
+
+}
+
+.pd-specifications-table {
+
+    overflow: hidden;
+
+    border: 1px solid var(--pd-border);
+
+    border-radius: 12px;
+
+}
+
+.pd-spec-row {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1.3fr;
+
+    gap: 15px;
+
+    padding: 15px 18px;
+
+    border-bottom: 1px solid var(--pd-border);
+
+    font-size: 14px;
+
+}
+
+.pd-spec-row:last-child {
+
+    border-bottom: none;
+
+}
+
+.pd-spec-row:nth-child(odd) {
+
+    background: #f7f9ff;
+
+}
+
+.pd-spec-row span {
+
+    color: var(--pd-muted);
+
+}
+
+.pd-spec-row strong {
+
+    color: var(--pd-navy);
+
+    font-weight: 600;
+
+    overflow-wrap: anywhere;
+
+}
+
+
+/* =========================================================
+   16. REVIEWS PANEL
+========================================================= */
+
+.pd-reviews-content {
+
+    max-width: 100%;
+
+}
+
+.pd-review-summary {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 20px;
+
+    margin-bottom: 25px;
+
+    border-radius: 15px;
+
+    background: linear-gradient(120deg,
+            #f0f4ff,
+            #fff9f4);
+
+}
+
+.pd-review-summary-number {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 8px;
+
+}
+
+.pd-review-summary-number>strong {
+
+    color: var(--pd-navy);
+
+    font-size: 43px;
+
+    font-weight: 800;
+
+}
+
+.pd-review-summary-number>span {
+
+    color: var(--pd-muted);
+
+    font-size: 12px;
+
+}
+
+
+/* =========================================================
+   17. REVIEW FORM CONTAINER
+========================================================= */
+
+.pd-review-form-container {
+
+    padding: 24px;
+
+    margin-bottom: 30px;
+
+    border: 1px solid var(--pd-border);
+
+    border-radius: 15px;
+
+    background: #ffffff;
+
+}
+
+.pd-review-form-container h3 {
+
+    margin: 0 0 8px;
+
+    color: var(--pd-navy);
+
+    font-size: 20px;
+
+}
+
+.pd-review-form-container>p {
+
+    margin: 0 0 20px;
+
+    color: var(--pd-muted);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+}
+
+.pd-review-form-container a {
+
+    color: var(--pd-primary);
+
+    font-weight: 700;
+
+}
+
+.pd-review-status {
+
+    display: inline-flex;
+
+    padding: 7px 15px;
+
+    margin-top: 10px;
+
+    border-radius: 20px;
+
+    background: #edf3ff;
+
+    color: var(--pd-navy);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+}
+
+
+/* =========================================================
+   18. REVIEW FORM FIELDS
+========================================================= */
+
+.pd-review-form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 17px;
+
+}
+
+.pd-form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+}
+
+.pd-form-group label {
+
+    color: var(--pd-navy);
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+}
+
+.pd-form-group input,
+.pd-form-group select,
+.pd-form-group textarea {
+
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid #dfe6f5;
+
+    border-radius: 9px;
+
+    outline: none;
+
+    color: var(--pd-text);
+
+    background: white;
+
+    font-size: 14px;
+
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+
+}
+
+.pd-form-group input:focus,
+.pd-form-group select:focus,
+.pd-form-group textarea:focus {
+
+    border-color: var(--pd-primary);
+
+    box-shadow: 0 0 0 3px rgba(255, 105, 0, 0.08);
+
+}
+
+.pd-form-group textarea {
+
+    min-height: 130px;
+
+    resize: vertical;
+
+}
+
+.pd-review-submit {
+
+    align-self: flex-start;
+
+    padding: 13px 27px;
+
+    color: white;
+
+    background: var(--pd-primary);
+
+    border: none;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition: all 0.2s ease;
+
+}
+
+.pd-review-submit:hover {
+
+    background: var(--pd-primary-dark);
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =========================================================
+   19. REVIEW ALERTS
+========================================================= */
+
+.pd-alert {
+
+    padding: 13px 17px;
+
+    margin-bottom: 18px;
+
+    border-radius: 9px;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+}
+
+.pd-alert-success {
+
+    color: #13754c;
+
+    background: #e8f8f0;
+
+    border: 1px solid #c9efdc;
+
+}
+
+.pd-alert-error {
+
+    color: #b52d36;
+
+    background: #fff0f0;
+
+    border: 1px solid #f5d3d3;
+
+}
+
+
+/* =========================================================
+   20. CUSTOMER REVIEW CARDS
+========================================================= */
+
+.pd-customer-reviews>h3 {
+
+    margin: 0 0 17px;
+
+    color: var(--pd-navy);
+
+    font-size: 20px;
+
+}
+
+.pd-review-card {
+
+    padding: 20px;
+
+    margin-bottom: 14px;
+
+    border: 1px solid var(--pd-border);
+
+    border-radius: 13px;
+
+    background: white;
+
+    transition: box-shadow 0.2s ease;
+
+}
+
+.pd-review-card:hover {
+
+    box-shadow: 0 5px 18px rgba(25, 60, 110, 0.06);
+
+}
+
+.pd-review-card-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+}
+
+.pd-review-card-header h4 {
+
+    margin: 0 0 7px;
+
+    color: var(--pd-navy);
+
+    font-size: 15px;
+
+}
+
+.pd-review-author {
+
+    color: var(--pd-muted);
+
+    font-size: 12px;
+
+}
+
+.pd-review-card-rating {
+
+    display: flex;
+
+    gap: 2px;
+
+    font-size: 15px;
+
+}
+
+.pd-review-text {
+
+    margin: 17px 0;
+
+    color: #647997;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+
+    overflow-wrap: anywhere;
+
+}
+
+.pd-review-date {
+
+    color: #98a5bb;
+
+    font-size: 11px;
+
+}
+
+.pd-no-reviews {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 35px 15px;
+
+    border-radius: 14px;
+
+    background: #f8faff;
+
+    text-align: center;
+
+}
+
+.pd-no-reviews>span {
+
+    color: #a8b8d3;
+
+    font-size: 45px;
+
+}
+
+.pd-no-reviews h4 {
+
+    margin: 10px 0;
+
+    color: var(--pd-navy);
+
+    font-size: 17px;
+
+}
+
+.pd-no-reviews p {
+
+    color: var(--pd-muted);
+
+    font-size: 13px;
+
+}
+
+
+/* =========================================================
+   21. RELATED PRODUCTS SECTION
+========================================================= */
+
+.pd-related-section {
+
+    margin-top: 42px;
+
+}
+
+.pd-section-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 28px;
+
+    margin-bottom: 22px;
+
+}
+
+.pd-section-heading span {
+
+    width: 140px;
+
+    max-width: 15%;
+
+    height: 1px;
+
+    background: linear-gradient(90deg,
+            transparent,
+            var(--pd-primary));
+
+}
+
+.pd-section-heading span:last-child {
+
+    background: linear-gradient(90deg,
+            var(--pd-primary),
+            transparent);
+
+}
+
+.pd-section-heading h2 {
+
+    margin: 0;
+
+    color: var(--pd-navy);
+
+    font-size: 25px;
+
+    font-weight: 800;
+
+    text-align: center;
+
+}
+
+
+/* =========================================================
+   22. RELATED PRODUCT GRID
+========================================================= */
+
+.pd-related-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 18px;
+
+}
+
+.pd-related-card {
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-width: 0;
+
+    padding: 12px;
+
+    border: 1px solid var(--pd-border);
+
+    border-radius: 17px;
+
+    background: white;
+
+    transition: all 0.25s ease;
+
+}
+
+.pd-related-card:hover {
+
+    transform: translateY(-5px);
+
+    border-color: #d9e3f7;
+
+    box-shadow: 0 10px 25px rgba(22, 60, 115, 0.07);
+
+}
+
+.pd-related-image {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 100%;
+
+    height: 160px;
+
+    overflow: hidden;
+
+    border-radius: 11px;
+
+    background: #f8f9fd;
+
+}
+
+.pd-related-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    padding: 10px;
+
+    object-fit: contain;
+
+    transition: transform 0.3s ease;
+
+}
+
+.pd-related-card:hover .pd-related-image img {
+
+    transform: scale(1.06);
+
+}
+
+.pd-related-placeholder {
+
+    color: var(--pd-muted);
+
+    font-size: 12px;
+
+}
+
+.pd-related-info {
+
+    display: flex;
+
+    flex-direction: column;
+
+    flex: 1;
+
+    padding: 10px 4px 3px;
+
+}
+
+.pd-related-info h3 {
+
+    margin: 0 0 8px;
+
+    color: var(--pd-navy);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    line-height: 1.5;
+
+}
+
+.pd-related-info h3 a:hover {
+
+    color: var(--pd-primary);
+
+}
+
+.pd-related-price {
+
+    margin: 0 0 12px;
+
+    color: var(--pd-navy);
+
+    font-size: 16px;
+
+    font-weight: 800;
+
+}
+
+.pd-related-cart-button {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    width: 100%;
+
+    min-height: 39px;
+
+    margin-top: auto;
+
+    padding: 9px 10px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    color: white;
+
+    background: linear-gradient(135deg,
+            #ff7800,
+            #ff5c00);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    transition: all 0.2s ease;
+
+}
+
+.pd-related-cart-button:hover:not(:disabled) {
+
+    background: var(--pd-primary-dark);
+
+    transform: translateY(-2px);
+
+}
+
+.pd-related-cart-button:disabled {
+
+    background: #aeb8c8;
+
+    cursor: not-allowed;
+
+}
+
+
+/* =========================================================
+   23. RESPONSIVE: LARGE TABLETS
+========================================================= */
+
+@media (max-width: 1100px) {
+
+    .pd-page {
+
+        padding: 20px 22px 45px;
+
+    }
+
+    .pd-product-layout {
+
+        gap: 25px;
+
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+
+    }
+
+    .pd-main-image {
+
+        height: 370px;
+
+    }
+
+    .pd-related-grid {
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    }
+
+}
+
+
+/* =========================================================
+   24. RESPONSIVE: TABLETS
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .pd-page {
+
+        padding: 18px 16px 40px;
+
+    }
+
+    .pd-product-layout {
+
+        grid-template-columns: 1fr;
+
+        gap: 27px;
+
+    }
+
+    .pd-main-image {
+
+        height: 420px;
+
+    }
+
+    .pd-thumbnails {
+
+        gap: 9px;
+
+    }
+
+    .pd-thumbnail {
+
+        height: 82px;
+
+    }
+
+    .pd-product-title {
+
+        font-size: 29px;
+
+    }
+
+    .pd-description-layout {
+
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+
+    }
+
+    .pd-description-image {
+
+        height: 280px;
+
+    }
+
+    .pd-tabs-navigation {
+
+        padding: 0 8px;
+
+    }
+
+    .pd-tab-button {
+
+        gap: 6px;
+
+        font-size: 13px;
+
+        padding: 16px 5px;
+
+    }
+
+    .pd-tab-panel {
+
+        padding: 19px;
+
+    }
+
+    .pd-cart-form {
+
+        grid-template-columns: 135px minmax(0, 1fr);
+
+    }
+
+}
+
+
+/* =========================================================
+   25. RESPONSIVE: MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .pd-page {
+
+        padding: 15px 12px 35px;
+
+    }
+
+    .pd-breadcrumb {
+
+        gap: 7px;
+
+        margin-bottom: 17px;
+
+        font-size: 11px;
+
+    }
+
+    .pd-main-image {
+
+        height: 310px;
+
+        border-radius: 15px;
+
+    }
+
+    .pd-main-image img {
+
+        padding: 14px;
+
+    }
+
+    .pd-thumbnails {
+
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    }
+
+    .pd-thumbnail {
+
+        height: 70px;
+
+    }
+
+    .pd-product-title {
+
+        font-size: 25px;
+
+    }
+
+    .pd-product-subtitle {
+
+        font-size: 13px;
+
+    }
+
+    .pd-current-price {
+
+        font-size: 28px;
+
+    }
+
+    .pd-cart-form {
+
+        grid-template-columns: 115px minmax(0, 1fr);
+
+        gap: 9px;
+
+    }
+
+    .pd-quantity-control {
+
+        height: 47px;
+
+        padding: 0 5px;
+
+    }
+
+    .pd-quantity-control input {
+
+        width: 30px;
+
+        font-size: 14px;
+
+    }
+
+    .pd-quantity-button {
+
+        width: 26px;
+
+        height: 26px;
+
+        font-size: 19px;
+
+    }
+
+    .pd-add-to-cart {
+
+        min-height: 47px;
+
+        padding: 10px 8px;
+
+        gap: 6px;
+
+        font-size: 12px;
+
+    }
+
+    .pd-tabs-navigation {
+
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    }
+
+    .pd-tab-button {
+
+        flex-direction: column;
+
+        gap: 5px;
+
+        font-size: 11px;
+
+        padding: 12px 3px;
+
+    }
+
+    .pd-tab-button span {
+
+        font-size: 17px;
+
+    }
+
+    .pd-tab-panel {
+
+        padding: 14px;
+
+    }
+
+    .pd-description-image {
+
+        height: 220px;
+
+    }
+
+    .pd-description-content h2 {
+
+        font-size: 18px;
+
+    }
+
+    .pd-description-content>p {
+
+        font-size: 13px;
+
+    }
+
+    .pd-spec-row {
+
+        grid-template-columns: 0.8fr 1.2fr;
+
+        gap: 8px;
+
+        padding: 13px 10px;
+
+        font-size: 12px;
+
+    }
+
+    .pd-review-form-container {
+
+        padding: 16px;
+
+    }
+
+    .pd-review-card {
+
+        padding: 15px;
+
+    }
+
+    .pd-related-grid {
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 10px;
+
+    }
+
+    .pd-related-card {
+
+        padding: 8px;
+
+        border-radius: 12px;
+
+    }
+
+    .pd-related-image {
+
+        height: 125px;
+
+    }
+
+    .pd-related-info h3 {
+
+        font-size: 12px;
+
+    }
+
+    .pd-related-price {
+
+        font-size: 14px;
+
+    }
+
+    .pd-related-cart-button {
+
+        font-size: 10px;
+
+        min-height: 35px;
+
+    }
+
+    .pd-section-heading {
+
+        gap: 12px;
+
+    }
+
+    .pd-section-heading h2 {
+
+        font-size: 19px;
+
+    }
+
+}
+
+
+/* =========================================================
+   26. ACCESSIBILITY
+========================================================= */
+
+.pd-page button:focus-visible,
+.pd-page a:focus-visible,
+.pd-page input:focus-visible,
+.pd-page select:focus-visible,
+.pd-page textarea:focus-visible {
+
+    outline: 3px solid rgba(255, 105, 0, 0.35);
+
+    outline-offset: 3px;
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .pd-page *,
+    .pd-page *::before,
+    .pd-page *::after {
+
+        scroll-behavior: auto !important;
+
+        transition-duration: 0.01ms !important;
+
+        animation-duration: 0.01ms !important;
+
+    }
+
+}

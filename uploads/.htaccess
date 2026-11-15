@@ -1,0 +1,9 @@
+# Froshgah - Upload Directory Security
+
+# Disable directory listing and CGI execution.
+Options -Indexes -ExecCGI
+
+# Prevent access to executable PHP-related files.
+<FilesMatch "(?i)\.(php[0-9]?|phtml|phar|pht|phps)$">
+    Require all denied
+</FilesMatch>
