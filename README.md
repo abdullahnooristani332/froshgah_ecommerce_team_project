@@ -477,7 +477,7 @@ No open-source license has currently been specified.
 
 Unless the project owner adds a license, the source code remains subject to applicable copyright law. Please contact the project owner for permission before redistributing or reusing the code.
 
-## 🙏 Acknowledgements
+##  Acknowledgements
 
 We would like to thank our instructors, classmates, and everyone who supported the development of this project.
 
